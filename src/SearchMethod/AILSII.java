@@ -202,6 +202,12 @@ public class AILSII
 		AILSII ailsII=new AILSII(instance,reader);
 		
 		ailsII.search();
+		
+		// Output final solution to stdout for integration
+		// Format: Route #1: ... \n Route #2: ... \n Cost <value>
+		if(ailsII.getBestSolution() != null) {
+			System.out.println(ailsII.getBestSolution().toString());
+		}
 	}
 	
 	public Solution getBestSolution() {
